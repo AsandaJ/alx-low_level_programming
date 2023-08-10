@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - Print Puzzle
  *
  * Return: Always 0 (Success)
  */
