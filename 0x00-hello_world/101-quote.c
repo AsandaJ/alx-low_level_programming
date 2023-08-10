@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * main - Entry point a C program that prints the specified text to the standard error
+ * main - Entry point the specified text to the standard error
  *
  * Return: Always 0 (Success)
  */
