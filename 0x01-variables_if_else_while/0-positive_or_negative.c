@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * Classify number and print message.
+ *main -  Classify number and print message.
  *
  * Return: on Success 0 always
  */
