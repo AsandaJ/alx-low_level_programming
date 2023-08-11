@@ -1,0 +1,1 @@
+Master essential C programming concepts: operators, conditionals (`if`, `if...else`), variables, loops (`while`), ASCII encoding, `printf` for output. Understand `-m32` and `-m64` compiler flags. Ensure code quality with Ubuntu 20.04, `gcc`, and Betty style, while maintaining error-free compilation.
