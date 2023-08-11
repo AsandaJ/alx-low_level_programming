@@ -1,16 +1,16 @@
 #include <stdio.h>
 /**
- * main - print digits
+ * main - print single digits
  *
- * Return: on Success 0
+ * Return: 0 on Success
  */
 int main(void)
 {
-	int m;
+	int n;
 
-	for (m  = 0; m < 10; m++)
-		printf("%d", m);
-	printf("\m");
+	for (n = 0; n < 10; n++)
+		printf("%d", n);
+	printf("\n");
 	return (0);
 }
 
