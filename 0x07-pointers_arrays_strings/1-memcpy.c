@@ -2,9 +2,9 @@
 #include "main.h"
 /**
  *_memcpy - Function to duplicate memory
- *Memory is stored at @dest
- *Memory is copied to src
- *Number of bytes represented by n
+ *@dest: Memory is stored
+ *@src: Memory is copied
+ *@n: Number of bytes represented
  *
  *Return: a pointer to dest
  */

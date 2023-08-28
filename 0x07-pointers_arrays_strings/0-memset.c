@@ -1,9 +1,9 @@
 #include "main.h"
 /**
  * _memset - A function that fills the memory with a constant byte
- * Fill memory fron s
- * Desired output value is b
- * Number of arrays to be changed is n
+ * @s: Fill memory
+ * @b: Desired output value
+ * @n: Number of arrays to be changed
  *
  * Return: a pointer to the memory area s
  */
