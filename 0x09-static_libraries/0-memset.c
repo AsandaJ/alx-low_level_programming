@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * _memset - the block to be filled with specific value
- * starting address of the memory to be filled : @s
- * The desired value: @b
+ * @s: starting address of the memory to be filled
+ * @b: The desired value
  * @n: Byte count
  *
  * Return: reinitialised

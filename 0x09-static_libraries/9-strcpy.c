@@ -1,6 +1,4 @@
-		
 #include "main.h"
-		
 /**
  * char *_strcpy - copy of string from src
  * @dest: copy to
