@@ -16,15 +16,14 @@ char *_strdup(char *str)
 	t = 0;
 	while (str[t] != '\0')
 		t++;
-		length++;
 
 	duplicate = malloc(sizeof(char) * (length + 1));
 
 	if (duplicate == NULL)
 		return (NULL);
 
-	for (t = 0; str[t]; t++)
-		duplicate[t] = str[t];
+	for (length = 0; str[length]; length++)
+		duplicate[length] = str[length];
 
 	return (duplicate);
 }
