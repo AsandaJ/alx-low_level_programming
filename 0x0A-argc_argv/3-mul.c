@@ -47,19 +47,20 @@ int _atoi(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int result, operand1, operand2;
+	int result;
 
 	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-
-	operand1 = _atoi(argv[1]);
-	operand2 = _atoi(argv[2]);
-	result = operand1 * operand2;
-
-	printf("%d\n", result);
+	else
+	{
+		result = (atoi(argv[1] * atoi(argv[2]));
+		printf("%d\n", result);
+	}
+		result = (atoi(argv[1] * atoi(argv[2]));
+		printf("%d\n", result);
 
 	return (0);
 }
