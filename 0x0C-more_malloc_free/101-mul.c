@@ -5,7 +5,7 @@
 #define ERR_MSG "Error"
 
 /**
- * is_digit - Evaluates whether a string contains a character that is not a digit.
+ * is_digit - Checks for non-digit characters in a string.
  * @s: The string to be inspected
  *
  * Return: 0 if a non-digit character is discovered, and 1 otherwise
@@ -59,7 +59,7 @@ void errors(void)
 int main(int argc, char *argv[])
 {
 	char *s1, *s2;
-	int b, c, len, k, carry, d,e, *result, a = 0;
+	int b, c, len, k, carry, d, e, *result, a = 0;
 
 	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))

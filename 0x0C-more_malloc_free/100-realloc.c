@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * *_realloc - Modify the memory block's size using malloc and release it using free.
+ * *_realloc - Change memory allocation size, then release.
  * @ptr: A reference to the memory previously allocated through malloc
  * @old_size: The dimension of the memory allocated for 'ptr'
  * @new_size: The updated dimension of the memory block
