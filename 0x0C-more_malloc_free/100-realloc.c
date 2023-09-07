@@ -1,0 +1,50 @@
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ * *_realloc - Modify the memory block's size using malloc and release it using free.
+ * @ptr: A reference to the memory previously allocated through malloc
+ * @old_size: The dimension of the memory allocated for 'ptr'
+ * @new_size: The updated dimension of the memory block
+ *
+ * Return: pointer to the newly allocated memory block
+ */
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+{
+	char *ptr1;
+	char *old_ptr;
+	unsigned int k;
+
+	if (new_size == old_size)
+		return (ptr);
+
+	if (new_size == 0 && ptr)
+	{
+		free(ptr);
+		return (NULL);
+	}
+
+	if (!ptr)
+		return (malloc(new_size));
+
+	ptr1 = malloc(new_size);
+	if (!ptr1)
+		return (NULL);
+
+	old_ptr = ptr;
+
+	if (new_size < old_size)
+	{
+		for (k = 0; k < new_size; k++)
+			ptr1[k] = old_ptr[k];
+	}
+
+	if (new_size > old_size)
+	{
+		for (k = 0; k < old_size; k++)
+			ptr1[k] = old_ptr[k];
+	}
+
+	free(ptr);
+	return (ptr1);
+}
