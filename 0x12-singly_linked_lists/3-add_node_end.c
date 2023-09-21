@@ -3,39 +3,39 @@
 #include "lists.h"
 
 /**
- * add_node_end - adds a new node at the end of a linked list
- * @head: double pointer to the list_t list
+ * add_node_end - appends node end
+ * @head: List_t List Double
  * @str: string to put in the new node
  *
- * Return: address of the new element, or NULL if it failed
+ * Return: new element address
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new;
-	list_t *temp = *head;
+	list_t *ew;
+	list_t *mp = *head;
 	unsigned int len = 0;
 
 	while (str[len])
 		len++;
 
-	new = malloc(sizeof(list_t));
-	if (!new)
+	ew = malloc(sizeof(list_t));
+	if (!ew)
 		return (NULL);
 
-	new->str = strdup(str);
-	new->len = len;
-	new->next = NULL;
+	ew->str = strdup(str);
+	ew->len = len;
+	ew->next = NULL;
 
 	if (*head == NULL)
 	{
-		*head = new;
-		return (new);
+		*head = ew;
+		return (ew);
 	}
 
-	while (temp->next)
-		temp = temp->next;
+	while (mp->next)
+		mp = mp->next;
 
-	temp->next = new;
+	mp->next = ew;
 
-	return (new);
+	return (ew);
 }
