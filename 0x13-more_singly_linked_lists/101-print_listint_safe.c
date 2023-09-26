@@ -5,62 +5,60 @@ size_t looped_listint_len(const listint_t *head);
 size_t print_listint_safe(const listint_t *head);
 
 /**
- * looped_listint_len - Counts the number of unique nodes
- * in a looped listint_t linked list.
- * @head: A pointer to the head of the listint_t to check.
+ * looped_listint_len - looped list unique count
+ * @head:listint_t head pointer.
  *
- * Return: If the list is not looped - 0.
- * Otherwise - the number of unique nodes in the list.
+ * Return: value options
  */
 size_t looped_listint_len(const listint_t *head)
 {
-	const listint_t *tortoise, *hare;
+	const listint_t *se, *re;
 	size_t nodes = 1;
 
 	if (head == NULL || head->next == NULL)
 		return (0);
 
-	tortoise = head->next;
-	hare = (head->next)->next;
+	se = head->next;
+	re = (head->next)->next;
 
-	while (hare)
+	while (re)
 	{
-		if (tortoise == hare)
+		if (se == re)
 		{
-			tortoise = head;
-			while (tortoise != hare)
+			se = head;
+			while (se != re)
 			{
 				nodes++;
-				tortoise = tortoise->next;
-				hare = hare->next;
+				se = se->next;
+				re = re->next;
 			}
 
-			tortoise = tortoise->next;
-			while (tortoise != hare)
+			se = se->next;
+			while (se != re)
 			{
 				nodes++;
-				tortoise = tortoise->next;
+				se = se->next;
 			}
 
 			return (nodes);
 		}
 
-		tortoise = tortoise->next;
-		hare = (hare->next)->next;
+		se = se->next;
+		re = (re->next)->next;
 	}
 
 	return (0);
 }
 
 /**
- * print_listint_safe - Prints a listint_t list safely.
- * @head: A pointer to the head of the listint_t list.
+ * print_listint_safe - safely print listint_t
+ * @head: listint_t head pointer
  *
- * Return: The number of nodes in the list.
+ * Return: list node count.
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nodes, index = 0;
+	size_t nodes, x = 0;
 
 	nodes = looped_listint_len(head);
 
@@ -75,7 +73,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	else
 	{
-		for (index = 0; index < nodes; index++)
+		for (x = 0; x < nodes; x++)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;

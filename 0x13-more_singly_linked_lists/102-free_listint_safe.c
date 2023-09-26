@@ -1,15 +1,15 @@
 #include "lists.h"
 
 /**
- * free_listint_safe - frees a linked list
- * @h: pointer to the first node in the linked list
+ * free_listint_safe - list deallocation performed
+ * @h: linked list's initial pointer
  *
- * Return: number of elements in the freed list
+ * Return: freed list element count
  */
 size_t free_listint_safe(listint_t **h)
 {
-	size_t len = 0;
-	int diff;
+	size_t n = 0;
+	int d;
 	listint_t *temp;
 
 	if (!h || !*h)
@@ -17,24 +17,24 @@ size_t free_listint_safe(listint_t **h)
 
 	while (*h)
 	{
-		diff = *h - (*h)->next;
-		if (diff > 0)
+		d = *h - (*h)->next;
+		if (d > 0)
 		{
-			temp = (*h)->next;
+			tp = (*h)->next;
 			free(*h);
-			*h = temp;
-			len++;
+			*h = tp;
+			n++;
 		}
 		else
 		{
 			free(*h);
 			*h = NULL;
-			len++;
+			n++;
 			break;
 		}
 	}
 
 	*h = NULL;
 
-	return (len);
+	return (n);
 }
